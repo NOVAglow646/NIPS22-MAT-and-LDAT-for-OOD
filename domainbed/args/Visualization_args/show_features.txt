@@ -1,0 +1,36 @@
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm TEST\
+              --dataset PACS\
+              --steps 1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_10/\
+              --gpus 3
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm LAT\
+              --dataset PACS\
+              --steps 1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_10/\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.1\
+              --emlr_ub 0.1\
+              --gpus 5

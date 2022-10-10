@@ -1,0 +1,257 @@
+delete_incomplete
+launch
+
+datasets:
+mixed /home/sjxin/datasets/mixed
+NICO /home/sjxin/datasets/NICOresized
+MNIST /home/sjxin/datasets/mnist
+CELEBA /home/sjxin/datasets/celeba
+camelyon /home/sjxin/DomainBed/domainbed/data/camelyon17_v1.0
+DomainNet /home/sjxin/DomainBed/domainbed/data/domain_net
+fmow /home/sjxin/DomainBed/domainbed/data/fmow_v1.1
+OfficeHome /home/sjxin/DomainBed/domainbed/data/office_home
+PACS /home/sjxin/DomainBed/domainbed/data/PACS
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/CBAT2PACS_vs_NCDG_reb_0\
+              --algorithms CBAT2\
+              --command_launcher multi_gpu\
+              --test_domains 1,2,3\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 0
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/CBAT2PACS_vs_NCDG_reb_0
+
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/KATPACS_vs_NCDG_reb_0\
+              --algorithms KAT\
+              --command_launcher multi_gpu\
+              --datasets PACS\
+              --test_domains 1,2,3\
+              --n_hparams 1\
+              --n_trials 1\
+              --kdelta_lower_bound 10\
+              --kdelta_upper_bound 10\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -2\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 2
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/KATPACS_vs_NCDG_reb_0
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/CBAT2PACS_vs_NCDG_reb_1\
+              --algorithms CBAT2\
+              --command_launcher multi_gpu\
+              --test_domains 0,2,3\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 1\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 3
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/CBAT2PACS_vs_NCDG_reb_1
+
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/KATPACS_vs_NCDG_reb_1\
+              --algorithms KAT\
+              --command_launcher multi_gpu\
+              --datasets PACS\
+              --test_domains 0,2,3\
+              --n_hparams 1\
+              --n_trials 1\
+              --kdelta_lower_bound 10\
+              --kdelta_upper_bound 10\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -2\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 5
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/KATPACS_vs_NCDG_reb_1
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/CBAT2PACS_vs_NCDG_reb_2\
+              --algorithms CBAT2\
+              --command_launcher multi_gpu\
+              --test_domains 0,1,3\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 1\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 2
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/CBAT2PACS_vs_NCDG_reb_2
+
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/KATPACS_vs_NCDG_reb_2\
+              --algorithms KAT\
+              --command_launcher multi_gpu\
+              --datasets PACS\
+              --test_domains 0,1,3\
+              --n_hparams 1\
+              --n_trials 1\
+              --kdelta_lower_bound 10\
+              --kdelta_upper_bound 10\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -2\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 3
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/KATPACS_vs_NCDG_reb_2
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/CBAT2PACS_vs_NCDG_reb_3\
+              --algorithms CBAT2\
+              --command_launcher multi_gpu\
+              --test_domains 0,1,2\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 1\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 5
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/CBAT2PACS_vs_NCDG_reb_3
+
+
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/KATPACS_vs_NCDG_reb_3\
+              --algorithms KAT\
+              --command_launcher multi_gpu\
+              --datasets PACS\
+              --test_domains 0,1,2\
+              --n_hparams 1\
+              --n_trials 1\
+              --kdelta_lower_bound 10\
+              --kdelta_upper_bound 10\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -2\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --gpus 3
+
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/KATPACS_vs_NCDG_reb_3
+

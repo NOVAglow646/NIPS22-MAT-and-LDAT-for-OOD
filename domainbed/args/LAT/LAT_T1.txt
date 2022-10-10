@@ -1,0 +1,409 @@
+delete_incomplete
+launch
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t1\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 1\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 7\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.01\
+              --llr_ub 0.01\
+              --emlr_lb 0.1\
+              --emlr_ub 0.1\
+              --gpus 5
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t1
+
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t2\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.1\
+              --emlr_ub 0.1\
+              --gpus 5
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t2
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t3\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 1
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t3
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_debug_\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --test_domains 0\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 1\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 1\
+              --steps 2
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_debug
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t4\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0\
+              --emlr_ub 0\
+              --gpus 1
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t4
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t5\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 1\
+              --at_eps_ub 1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0\
+              --emlr_ub 0\
+              --gpus 3
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t5
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t6\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 10\
+              --at_eps_ub 10\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 3
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t6
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t7\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 100\
+              --at_eps_ub 100\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 4
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t7
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t8\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 1000\
+              --at_eps_ub 1000\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 4
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t8
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t9\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 10000\
+              --at_eps_ub 10000\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 4
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t9
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LAT_T1_t10\
+              --algorithms LAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -1\
+              --A_lr_ub -1\
+              --B_lr_lb -1\
+              --B_lr_ub -1\
+              --at_eps_lb 100000\
+              --at_eps_ub 100000\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --llr_lb 0.1\
+              --llr_ub 0.1\
+              --emlr_lb 0.01\
+              --emlr_ub 0.01\
+              --gpus 2
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LAT_T1_t10

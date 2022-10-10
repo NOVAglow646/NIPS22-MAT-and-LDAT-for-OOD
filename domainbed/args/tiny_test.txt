@@ -1,0 +1,138 @@
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm LDMAT\
+              --dataset PACS\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb -2\
+              --A_lr_ub -2\
+              --B_lr_lb -2\
+              --B_lr_ub -2\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 20\
+              --kdelta_upper_bound 20\
+              --steps 1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --gpus 3
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm LDMAT\
+              --dataset PACS\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb 1\
+              --A_lr_ub 1\
+              --B_lr_lb 1\
+              --B_lr_ub 1\
+              --at_eps_lb 1000\
+              --at_eps_ub 1000\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 20\
+              --kdelta_upper_bound 20\
+              --steps 1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_100/\
+              --gpus 3
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm KAT\
+              --dataset PACS\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb 1\
+              --A_lr_ub 1\
+              --B_lr_lb 1\
+              --B_lr_ub 1\
+              --at_eps_lb 1000\
+              --at_eps_ub 1000\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 20\
+              --kdelta_upper_bound 20\
+              --steps 1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_100/\
+              --gpus 3
+              
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm LDMAT\
+              --dataset PACS\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb 1\
+              --A_lr_ub 1\
+              --B_lr_lb 1\
+              --B_lr_ub 1\
+              --at_eps_lb 10\
+              --at_eps_ub 10\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 20\
+              --kdelta_upper_bound 20\
+              --steps 1500\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_10/\
+              --gpus 4
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.train\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --algorithm TEST\
+              --dataset PACS\
+              --steps 1\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_10/\
+              --gpus 3

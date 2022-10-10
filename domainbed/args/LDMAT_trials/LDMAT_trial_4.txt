@@ -1,0 +1,162 @@
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LDMAT_T4_t1\
+              --algorithms LDMAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 5\
+              --cb_rank_ub 5\
+              --A_lr_lb 0\
+              --A_lr_ub 0\
+              --B_lr_lb 0\
+              --B_lr_ub 0\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 15\
+              --kdelta_upper_bound 15\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_0.1/\
+              --gpus 0
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LDMAT_T4_t1
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LDMAT_T4_t2\
+              --algorithms LDMAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 10\
+              --cb_rank_ub 10\
+              --A_lr_lb 0\
+              --A_lr_ub 0\
+              --B_lr_lb 0\
+              --B_lr_ub 0\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 15\
+              --kdelta_upper_bound 15\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_0.1/\
+              --gpus 1
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LDMAT_T4_t2
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LDMAT_T4_t3\
+              --algorithms LDMAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 15\
+              --cb_rank_ub 15\
+              --A_lr_lb 0\
+              --A_lr_ub 0\
+              --B_lr_lb 0\
+              --B_lr_ub 0\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 15\
+              --kdelta_upper_bound 15\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_0.1/\
+              --gpus 2
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LDMAT_T4_t3
+
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.sweep launch\
+              --data_dir=/home/sjxin/DomainBed/domainbed/data/\
+              --output_dir=./domainbed/results/LDMAT_T4_t4\
+              --algorithms LDMAT\
+              --command_launcher multi_gpu\
+              --single_test_envs\
+              --datasets PACS\
+              --n_hparams 1\
+              --n_trials 3\
+              --cb_rank_lb 20\
+              --cb_rank_ub 20\
+              --A_lr_lb 0\
+              --A_lr_ub 0\
+              --B_lr_lb 0\
+              --B_lr_ub 0\
+              --at_eps_lb 0.1\
+              --at_eps_ub 0.1\
+              --at_alpha_lb -1\
+              --at_alpha_ub -1\
+              --kat_alpha_step_lb -3\
+              --kat_alpha_step_ub -3\
+              --kdelta_lower_bound 15\
+              --kdelta_upper_bound 15\
+              --steps 8000\
+              --is_cmnist 0\
+              --wd_lb 1e-3\
+              --wd_ub 1e-3\
+              --dpot 0.1\
+              --lr_lb 5e-5\
+              --lr_ub 5e-5\
+              --visualization_dir eps_0.1/\
+              --gpus 3
+
+conda activate torch
+cd /home/qxwang/dbcode
+python -m domainbed.scripts.collect_results\
+       --input_dir=/home/qxwang/dbcode/domainbed/results/LDMAT_T4_t4
