@@ -1,10 +1,10 @@
-### Code for NeurIPS 2022 Paper: Improving Out-of-Distribution Robustness by Adversarial Training with Structured Priors
+# Code for NeurIPS 2022 Paper: Improving Out-of-Distribution Robustness by Adversarial Training with Structured Priors
 ****
 This repository is the source code for our NIPS 2022 paper **Improving Out-of-Distribution Robustness by Adversarial Training with Structured Priors**.
 
 This code is inherited from Domainbed https://github.com/facebookresearch/DomainBed. We implemented our algorithms MAT and LDAT in algorithms.py.
 
-#### Quick Start
+## Quick Start
 To get the sweep result on a certain datatset of an algorithm, try running:
 <pre><code>python -m domainbed.scripts.sweep launch\
               --data_dir=/your_path_to_data/PACS\
@@ -37,7 +37,7 @@ To view the results, run:
 </pre></code>
 
 
-#### Arguments
+## Arguments
 When conducting a sweep, you can specify the hyperparameters of the algorithm. We list the correspondence of some main hyperparameters and their argument name, so you can adjust them at will. 'lb'/'ub' indicate the lower/upper bound of the search space. The range in parentheses indicates that the parameter refers to a power of 10, not the parameter itself.
 
 > perturbation radius $\epsilon$ ---- at_eps_lb/at_eps_ub
