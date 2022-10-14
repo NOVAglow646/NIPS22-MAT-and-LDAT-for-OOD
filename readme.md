@@ -1,8 +1,6 @@
-# Code for NeurIPS 2022 Paper: Improving Out-of-Distribution Robustness by Adversarial Training with Structured Priors
+# Code for NeurIPS 2022 Paper: Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors
 ****
-This repository is the source code for our NIPS 2022 paper **Improving Out-of-Distribution Robustness by Adversarial Training with Structured Priors**.
-
-This code is inherited from Domainbed https://github.com/facebookresearch/DomainBed. We implemented our algorithms MAT and LDAT in algorithms.py.
+This repository is the source code for our NIPS 2022 paper **Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors**. [paper](https://arxiv.org/abs/2210.06807  'Paper')
 
 ## Quick Start
 To get the sweep result on a certain datatset of an algorithm, try running:
@@ -29,7 +27,7 @@ To get the sweep result on a certain datatset of an algorithm, try running:
               --wd_ub 1e-3\
               --gpus 2
 </pre></code>
-This will launch a sweep of MAT on PACS dataset. The script will train models with 8 different sets of hyperparameters and select the optimal model parameters for evaludation using both training-domain validation and test-domain validation. The whole process will run 3 random trials and average result will be reported. Argument --out_put_dir specifies where the evaluation results and checkpoints will be stored at.
+This will launch a sweep of MAT on PACS dataset. The script will train models with 8 different sets of hyperparameters and select the optimal model parameters for evaludation using both training-domain validation and test-domain validation. The whole process will run 3 random trials and average result will be reported. Argument --out_put_dir specifies where the evaluation results and checkpoints will be stored at. --data_dir is the dataset direction.
 
 To view the results, run:
 <pre><code>python -m domainbed.scripts.collect_results\
@@ -65,3 +63,7 @@ When conducting a sweep, you can specify the hyperparameters of the algorithm. W
 > Test on specified domains ---- test_domains 0,1,2
 
 The default value of all the parameters is in hparams_registry.py.
+
+
+
+This code is inherited from Domainbed https://github.com/facebookresearch/DomainBed. We implemented our algorithms MAT and LDAT in algorithms.py.
