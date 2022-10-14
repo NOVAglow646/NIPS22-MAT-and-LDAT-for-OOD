@@ -2,6 +2,8 @@
 ****
 This repository is the source code for our NIPS 2022 paper **Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors**. [paper](https://arxiv.org/abs/2210.06807  'Paper')
 
+The codes are in "domainbed" folder. 
+
 ## Quick Start
 To get the sweep result on a certain datatset of an algorithm, try running:
 <pre><code>python -m domainbed.scripts.sweep launch\
