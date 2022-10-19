@@ -74,7 +74,7 @@ This code is inherited from Domainbed https://github.com/facebookresearch/Domain
 
 If you find this work useful, please cite the accompanying paper:
 
-<pre><code>@inproceedings{zhang2022how,
+<pre><code>@inproceedings{wang2022improv,
   title={Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors},
   author={Wang, Qixun and Wang, Yifei and Zhu, Hong and Wang, Yisen},
   booktitle={NeurIPS},
