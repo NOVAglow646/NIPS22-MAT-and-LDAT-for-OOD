@@ -42,17 +42,17 @@ When conducting a sweep, you can specify the hyperparameters of the algorithm. W
 
 perturbation radius $\epsilon$ ---- at_eps_lb/at_eps_ub
 
-FGSM step size $\gamma$ ---- at_alpha_lb/at_alpha_ub ($[10^{at\_alpha\_lb}$, $10^{at\_alpha\_ub}]$)
+FGSM step size $\gamma$ ---- at_alpha_lb/at_alpha_ub ($[10^{at\_alpha\_lb},10^{at\_alpha\_ub}]$)
 
 MAT perturbation number $k$ ---- kdelta_lower_bound/kdelta_upper_bound
 
-MAT alpha learning rate $\eta$ ---- kat_alpha_step_lb/kat_alpha_step_ub ($[10^{kat\_alpha\_step\_lb}$, $10^{kat\_alpha\_step\_ub}]$)
+MAT alpha learning rate $\eta$ ---- kat_alpha_step_lb/kat_alpha_step_ub ($[10^{kat\_alpha\_step\_lb},10^{kat\_alpha\_step\_ub}]$)
 
 LDAT rank $l$ ---- cb_rank_lb/cb_rank_ub
 
-LDAT $A$ learning rate $\rho_A$ ---- A_lr_lb/A_lr_ub ($[10^{A\_lr\_lb}$, $10^{A\_lr\_ub}]$)
+LDAT $A$ learning rate $\rho_A$ ---- A_lr_lb/A_lr_ub ($[10^{A\_lr\_lb},10^{A\_lr\_ub}]$)
 
-LDAT $B$ learning rate $\rho_B$ ---- B_lr_lb/B_lr_ub ($[10^{B\_lr\_lb}$, $10^{B\_lr\_ub}]$)
+LDAT $B$ learning rate $\rho_B$ ---- B_lr_lb/B_lr_ub ($[10^{B\_lr\_lb},10^{B\_lr\_ub}]$)
 
 Network learining rate $r$ ---- lr_lb/lr_ub
 
