@@ -1,6 +1,6 @@
 # Code for NeurIPS 2022 Paper: Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors
 ****
-This repository is the source code for our NIPS 2022 paper **Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors**. [paper](https://arxiv.org/abs/2210.06807  'Paper')
+This repository includes a PyTorch implementation of the NeurIPS 2022 paper [Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors](https://arxiv.org/abs/2210.06807) authored by [Qixun Wang](https://novaglow646.github.io/QixunWang-Homepage.github.io/), [Yifei Wang](https://yifeiwang77.github.io/), Zhu Hong, and [Yisen Wang](https://yisenwang.github.io/).
 
 The codes are in "domainbed" folder. 
 
@@ -40,32 +40,44 @@ To view the results, run:
 ## Arguments
 When conducting a sweep, you can specify the hyperparameters of the algorithm. We list the correspondence of some main hyperparameters and their argument name, so you can adjust them at will. 'lb'/'ub' indicate the lower/upper bound of the search space. The range in parentheses indicates that the parameter refers to a power of 10, not the parameter itself.
 
-> perturbation radius $\epsilon$ ---- at_eps_lb/at_eps_ub
+perturbation radius $\epsilon$ ---- at_eps_lb/at_eps_ub
 
-> FGSM step size $\gamma$ ---- at_alpha_lb/at_alpha_ub ($[10^{at\_alpha\_lb},10^{at\_alpha\_ub}]$)
+FGSM step size $\gamma$ ---- at_alpha_lb/at_alpha_ub ($[10^{at\_alpha\_lb},10^{at\_alpha\_ub}]$)
 
-> MAT perturbation number $k$ ---- kdelta_lower_bound/kdelta_upper_bound
+MAT perturbation number $k$ ---- kdelta_lower_bound/kdelta_upper_bound
 
-> MAT alpha learning rate $\eta$ ---- kat_alpha_step_lb/kat_alpha_step_ub ($[10^{kat\_alpha\_step\_lb},10^{kat\_alpha\_step\_ub}]$)
+MAT alpha learning rate $\eta$ ---- kat_alpha_step_lb/kat_alpha_step_ub ($[10^{kat\_alpha\_step\_lb},10^{kat\_alpha\_step\_ub}]$)
 
-> LDAT rank $l$ ---- cb_rank_lb/cb_rank_ub
+LDAT rank $l$ ---- cb_rank_lb/cb_rank_ub
 
-> LDAT $A$ learning rate $\rho_A$ ---- A_lr_lb/A_lr_ub ($[10^{A\_lr\_lb},10^{A\_lr\_ub}]$)
+LDAT $A$ learning rate $\rho_A$ ---- A_lr_lb/A_lr_ub ($[10^{A\_lr\_lb},10^{A\_lr\_ub}]$)
 
-> LDAT $B$ learning rate $\rho_B$ ---- B_lr_lb/B_lr_ub ($[10^{B\_lr\_lb},10^{B\_lr\_ub}]$)
+LDAT $B$ learning rate $\rho_B$ ---- B_lr_lb/B_lr_ub ($[10^{B\_lr\_lb},10^{B\_lr\_ub}]$)
 
-> Network learining rate $r$ ---- lr_lb/lr_ub
+Network learining rate $r$ ---- lr_lb/lr_ub
 
-> Is/isn't CMNIST dataset ---- is_cmnist 1/0
+Is/isn't CMNIST dataset ---- is_cmnist 1/0
 
-> Total training epochs ---- steps
+Total training epochs ---- steps
 
-> Test on every domain ---- single_test_envs
+Test on every domain ---- single_test_envs
 
-> Test on specified domains ---- test_domains 0,1,2
+Test on specified domains ---- test_domains 0,1,2
 
 The default value of all the parameters is in hparams_registry.py.
 
 
 
 This code is inherited from Domainbed https://github.com/facebookresearch/DomainBed. We implemented our algorithms MAT and LDAT in algorithms.py.
+
+## Citing this Work
+
+If you find this work useful, please cite the accompanying paper:
+
+<pre><code>@inproceedings{zhang2022how,
+  title={Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors},
+  author={Wang, Qixun and Wang, Yifei and Zhu, Hong and Wang, Yisen},
+  booktitle={NeurIPS},
+  year={2022}
+}
+</pre></code>
