@@ -1,6 +1,6 @@
 # Code for NeurIPS 2022 Paper: Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors
 
-
+![method](./method.png)
 
 ****
 This repository includes a PyTorch implementation of the NeurIPS 2022 paper [Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors](https://arxiv.org/abs/2210.06807) authored by [Qixun Wang](https://novaglow646.github.io/QixunWang-Homepage.github.io/), [Yifei Wang](https://yifeiwang77.github.io/), Zhu Hong, and [Yisen Wang](https://yisenwang.github.io/).
